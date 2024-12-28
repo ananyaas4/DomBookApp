@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/card.css">
 </head>
 <body>
     <div id="nav"></div>
-    
+    <form id="form">
+        <h2>Books</h2>
+        <input id="title" type="text" placeholder="Enter Title" required>
+        <input id="author" type="text" placeholder="Enter Author" required>
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="fiction">Fiction</option>
+            <option value="comedy">Comedy</option>
+            <option value="technical">Technical</option>
+        </select>
+        <input id="submit" type="submit" value="Add Book">
+    </form>
+    <div id="cont"></div>
     <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/admin.js" type="module"></script>
 </body>
 </html>

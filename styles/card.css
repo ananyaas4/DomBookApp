@@ -1,0 +1,30 @@
+#cont{
+    width: 90%;
+    padding: 20px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+#cont > div{
+    width: 85%;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button{
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(16, 152, 16);
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(28, 220, 28);
+}

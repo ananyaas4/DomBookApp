@@ -13,12 +13,16 @@
     padding: 25px;
 }
 
-#form input{
+#form input, #form select{
     width: 85%;
     padding: 10px;
     border: 0;
     font-size: 15px;
     border-radius: 6px;
+}
+
+#form select{
+    width: 92%;
 }
 
 input::placeholder{
