@@ -1,0 +1,1 @@
+export const baseUrl = "https://adorable-probable-alphabet.glitch.me";
