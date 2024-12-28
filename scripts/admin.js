@@ -17,7 +17,7 @@ form.addEventListener("submit", function(){
     let title = form.title.value;
     let author = form.author.value;
     let category = form.category.value;
-    let bookobj = {title, author, category, isAvailable:false, borrowedDays: null,isVerified: false};
+    let bookobj = {title, author, category, isAvailable: true, borrowedDays: null, isVerified: false};
     fetch(`${baseUrl}/books`,{
         method: "POST",
         headers: {
@@ -62,13 +62,21 @@ function displayBooks(arr){
         category.textContent = `Category: ${ele.category}`;
 
         let availabilityStatus = document.createElement("p");
-        availabilityStatus.textContent = `Availability Status: ${ele.isAvailable}`;
+        availabilityStatus.textContent = `Availability Status: ${ele.isAvailable?"Available":"Borrowed"}`;
 
         let borrowedDays = document.createElement("p");
         borrowedDays.textContent = `Borrowed Days: ${ele.borrowedDays}`;
 
         let verifyBtn = document.createElement("button");
         verifyBtn.textContent = "Verify Book";
+        if(ele.isVerified == true)
+        {
+            verifyBtn.classList.add("verified");
+        }
+        else
+        {
+            verifyBtn.classList.add("pending");
+        }
         verifyBtn.addEventListener("click",function(){
             if(confirm("Are you sure to Verify?"))
             {
@@ -79,7 +87,7 @@ function displayBooks(arr){
         let deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete Book";
         deleteBtn.addEventListener("click",function(){
-            if(confirm("Are you sure to Delete..??"))
+            if(confirm("Are you sure to Delete?"))
             {
                 deleteFnc(ele);
             }

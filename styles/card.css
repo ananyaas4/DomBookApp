@@ -28,3 +28,17 @@ button{
 button:hover{
     background-color: rgb(28, 220, 28);
 }
+
+.verified{
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.pending{
+    background-color: rgb(28, 220, 28);
+}
+
+#available, #borrow{
+    display: inline;
+    margin: 2rem auto;
+}
