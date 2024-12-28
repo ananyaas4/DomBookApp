@@ -58,13 +58,12 @@ function displayAvBooks(arr){
         let borrowedDays = document.createElement("p");
         borrowedDays.textContent = `Borrowed Days: ${ele.borrowedDays}`;
 
-    
             let boBtn = document.createElement("button");
             boBtn.textContent = "Borrow Book";
             boBtn.addEventListener("click",function(){
-                if(confirm("Are you sure to Verify?"))
+                if(confirm("Borrowing duration (maximum 10 days)"))
                 {
-                    alert("Clicked");
+                    alert("Book Borrowed Successfully.");
                 }
             });
             
