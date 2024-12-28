@@ -96,9 +96,9 @@ function displayReBooks(arr){
             let reBtn = document.createElement("button");
             reBtn.textContent = "Review Book";
             reBtn.addEventListener("click",function(){
-                if(confirm("Are you sure to Verify?"))
+                if(confirm("Are you sure to return book?"))
                 {
-                    alert("Clicked");
+                    alert("Book Returned Successfully.");
                 }
             });
         card.append(title, author, category, availabilityStatus, borrowedDays, reBtn);
